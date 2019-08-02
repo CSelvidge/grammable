@@ -29,6 +29,11 @@ RSpec.describe CommentsController, type: :controller do
       expect(response).to have_http_status :not_found
 
     end
+
+    it "should return a fake name" do
+      fake_name = Faker::Name.name
+      expect(fake_name).to eq fake_name
+    end
   end
 
 end
